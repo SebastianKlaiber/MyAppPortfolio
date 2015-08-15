@@ -49,23 +49,27 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_media_streamer:
-                Toast.makeText(this, R.string.toast_media_streamer, Toast.LENGTH_LONG).show();
+                DisplayText(getString(R.string.toast_media_streamer));
                 break;
             case R.id.btn_super_duo1:
-                Toast.makeText(this, R.string.toast_super_duo1, Toast.LENGTH_LONG).show();
+                DisplayText(getString(R.string.toast_super_duo1));
                 break;
             case R.id.btn_super_duo2:
-                Toast.makeText(this, R.string.toast_super_duo2, Toast.LENGTH_LONG).show();
+                DisplayText(getString(R.string.toast_super_duo2));
                 break;
             case R.id.btn_ant_terminator:
-                Toast.makeText(this, R.string.toast_ant_terminator, Toast.LENGTH_LONG).show();
+                DisplayText(getString(R.string.toast_ant_terminator));
                 break;
             case R.id.btn_materialize:
-                Toast.makeText(this, R.string.toast_materialize, Toast.LENGTH_LONG).show();
+                DisplayText(getString(R.string.toast_materialize));
                 break;
             case R.id.btn_capstone:
-                Toast.makeText(this, R.string.toast_capstone, Toast.LENGTH_LONG).show();
+                DisplayText(getString(R.string.toast_capstone));
                 break;
         }
+    }
+
+    void DisplayText(String s){
+        Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
     }
 }
